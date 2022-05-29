@@ -1,19 +1,14 @@
-/*export default class temp {
-  constructor(side1, side2, side3) {
-    this.side1 = side1;
-    this.side2 = side2;
-    this.side3 = side3;
-  }
-
-  checkType() {
-    if ( ) {
-      return " ";
-    } else if ( ) {
-      return " ";
-    }  else if ( ) {
-      return " ";
-    } else {
-      return " ";
+/*export default class WeatherService {  
+  static async getWeather(city) {
+    try {
+      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`);
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response.json();
+    } catch(error) {
+      return error.message;
     }
-  }    
-}*/
+  }
+}
+*/
